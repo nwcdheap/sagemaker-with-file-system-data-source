@@ -1,5 +1,13 @@
 # 使用Amazon FSx for Lustre 和 Amazon EFS 作数据源加快 Amazon Sagemaker 训练
 
+## 免责声明
+
+建议测试过程中使用此方案，生产环境使用请自行考虑评估。
+
+当您对方案需要进一步的沟通和反馈后，欢迎在 github 项目 issue 中留言反馈 bugs。
+
+
+
 ## 背景
 
 在 SageMaker 中训练模型一般使用Amazon Simple Storage Service (以下简称S3) 作为存储配合使用。事实上SageMaker做模型训练时已经支持多种数据源，比如[ Amazon FSx for Lustre ](https://aws.amazon.com/fsx/lustre/)和 [Amazon Elastic File System](https://aws.amazon.com/efs/) (EFS) 。SageMaker通过直接读取存储在EFS或者FSx for Luster上的数据来加快训练模型时数据加载进度。
